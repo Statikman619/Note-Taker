@@ -12,3 +12,14 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// Static Middleware
+app.use(express.static("./develop/public"));
+
+// API "GET" request
+app.get("/api/notes", function (req, res) {
+  readFileAsync("./develop/db/db.json", "utf8").then(function (data) {
+    notes = [].concat(JSON.parse(data));
+    res.json(notes);
+  });
+});
