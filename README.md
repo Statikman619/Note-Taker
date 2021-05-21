@@ -35,6 +35,8 @@ Mike with the help of Herm during office hours and my awesome tutor Andrew.
 
 ## Test
 
+Type "node server.js" in the command line.
+
 ## Questions
 
 Contact me:
