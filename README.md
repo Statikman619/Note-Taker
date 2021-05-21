@@ -40,3 +40,6 @@ Mike with the help of Herm during office hours and my awesome tutor Andrew.
 Contact me:
 Github:[Statikman619](https://github.com/Statikman619)
 Email:[martinez.michael02@gmail.com](https://github.com/Statikman619)
+
+
+![Note-Taker](https://user-images.githubusercontent.com/73040685/119071120-17c9bb00-b99e-11eb-8aa6-80ae4008841a.png)
