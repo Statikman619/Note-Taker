@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static Middleware
-app.use(express.static("./develop/public"));
+app.use(express.static("public"));
 
 // API "GET" request
 app.get("/api/notes", function (req, res) {
@@ -59,3 +59,13 @@ app.delete("/api/notes/:id", function (req, res) {
       res.send("saved success!!!");
     });
 });
+
+// HTML Routes
+app.get("/notes", function (req, res) {
+  res.sendFile(path.join(__dirname, "./public/notes.html"));
+});
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "./public/index.html"));
+});
+// Listening
+app.listen(PORT);
