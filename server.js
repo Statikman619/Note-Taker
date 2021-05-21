@@ -39,3 +39,23 @@ app.post("/api/notes", function (req, res) {
       res.json(note);
     });
 });
+
+// API Route | "DELETE" request
+app.delete("/api/notes/:id", function (req, res) {
+  const idToDelete = parseInt(req.params.id);
+  readFileAsync("./develop/db/db.json", "utf8")
+    .then(function (data) {
+      const notes = [].concat(JSON.parse(data));
+      const newNotesData = [];
+      for (let i = 0; i < notes.length; i++) {
+        if (idToDelete !== notes[i].id) {
+          newNotesData.push(notes[i]);
+        }
+      }
+      return newNotesData;
+    })
+    .then(function (notes) {
+      writeFileAsync("./develop/db/db.json", JSON.stringify(notes));
+      res.send("saved success!!!");
+    });
+});
