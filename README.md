@@ -22,11 +22,13 @@ Routing is how we design our server to handle responses when a client makes a re
 
 ## Installation
 
-In your terminal in the command line run "npm install -y" "npm install express" "npm install uuid"
+Clone this repository to receive all my files. Once you have my code make sure you are in the correct file directory.
+in the command line run "npm install" in the terminal to download all the needed dependencies.
 
 ## Usage
 
 When you run "node server.js" you're alerted that the PORT is listening on "PORT 8000" in your browser type in "localhost:8000" and you will be redirected to the notes page.
+Once you're in the notes page in the browswer you can add all your notes.
 
 ## License MIT
 
